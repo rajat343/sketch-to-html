@@ -1,4 +1,4 @@
-# Br0c0de
+# Sketch 2 HTML
 
 Goal was to develop a python application to generate computer code (HTML source code) for the GUI sketch which is provided as an input.
 
