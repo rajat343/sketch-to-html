@@ -26,13 +26,7 @@ class Plr:
         input_image = png_filename[:png_filename.find('.png')]
         print("Generating Computer code for given Image:{}".format(input_image))
         generated_gui, gui_output_filepath= self.get_gui(png_path,verbose=verbose, output_path=output_path, input_image=input_image)
-	generated_html = self.get_html(generated_gui, input_image, verbose=verbose, output_path=output_path, style=style)
-
-
-
-
-        
-
+    generated_html = self.get_html(generated_gui, input_image, verbose=verbose, output_path=output_path, style=style)
 
     def load_model(self, json_path,weights_path):
         json_file = open(json_path, 'r')
@@ -101,11 +95,6 @@ class Plr:
             out_f.write(' '.join(gui_array))
         return gui_output_filepath
 
-
-
-
-    
-
     def get_html(self, generated_gui_array,sample_id, verbose,output_path, style='default'):
 
         compiler = Compiler(style)
@@ -123,18 +112,14 @@ class Plr:
                 output_file.write(compiled_website)
                 print("generated HTML Saved to {}".format(output_filepath))
 
-	#subprocess.call(["cd"])
-	#subprocess.call(["cd","Desktop"])
-	#subprocess.call(["cd","brocode2019.github.io"])
-	os.chdir("brocode2019.github.io")
-	#subprocess.call(["cd","brocode2019.github.io"])
-	subprocess.call(["git","add","index.html"])
-	print("done 1")
-	subprocess.call(["git","commit","-m","\"commit\""])
-	print("done 2")
-	subprocess.call(["git","push","origin","master"])
-	print("done 3")
-	return compiled_website
+        os.chdir("rajat343.github.io")
+        subprocess.call(["git","add","index.html"])
+        print("done 1")
+        subprocess.call(["git","commit","-m","\"commit\""])
+        print("done 2")
+        subprocess.call(["git","push","origin","master"])
+        print("done 3")
+        return compiled_website
 
     def word_for_id(self, integer):
         for word, index in self.tokenizer.word_index.items():
