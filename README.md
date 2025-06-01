@@ -53,11 +53,6 @@ Note: The user also requires the weights which are not in this repo because of t
 -   HTML
 -   Bootstrap (to make the site responsive)
 
-## Additional Perks (Security) [MIDNIGHT SURPRISE]
-
-As the project is generally for non-techinical users and assuming that they dont understand the _difference between HTTPS and HTTP protocols_. To address this problem, have implemented additional configuration in the server side which redirects the user to HTTPS in case they have used HTTP. This would prevent them from _MITM (Man In The Middle) attacks_ carried out by intruders.
-Implementation of this in the _sslconfiguration.conf_ file, in the repo above.
-
 ## Dependencies
 
 -   Keras
